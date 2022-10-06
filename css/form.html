@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <article>
+    <h1>アンケートフォーム</h1>
+    <p>下記入力フォームよりアンケートのご入力をお願いいたします。</p>  
+    <form action="#" method="post">
+      <p><label>お名前（必須） <br>
+      <input type="text" name="name" required></label></p>
+      <p><label>メールアドレス（必須） <br>
+      <input type="email" name="email" required></label></p>  
+      <p><label>パスワード（必須）<br>
+      <input type="password" name="password" required></label></p>
+      <p>性別<br>
+        <label><input type="radio" name="gender" value="male" checked>男性</label>
+        <label><input type="radio" name="gender" value="female" disabled>女性</label>
+      </p>
+      <p>好きな動物<br>
+        <label><input type="checkbox" name="animal" value="dog" checked>犬</label>
+        <label><input type="checkbox" name="animal" value="cat" disabled>猫</label>
+        <label><input type="checkbox" name="animal" value="rabbit">ウサギ</label>
+      </p>
+      <p><label>好きな野菜か果物<br>
+        <select name="vegetables-or-fruits">
+        <option value="">下記の中から選択してください</option>
+        <optgroup label="野菜">
+          <option value="carrot" selected>にんじん</option>
+          <option value="tomato" disabled>とまと</option>
+        </optgroup>
+        <optgroup label="果物">
+          <option value="orange">オレンジ</option>
+          <option value="apple">りんご</option>
+          <option value="banana">バナナ</option>
+        </optgroup>
+        </select>
+      </label></p>
+    <P><label>感想<br>
+    <textarea name="comment" clos="30" rows="10" placeholder="こちらに入力して下さい"></textarea></label></P>
+    <p><input type="image" src="images/sample.png" alt="送信" width="100" height="30"></p> 
+  </form> 
+  </article>  
+</body>
+</html>

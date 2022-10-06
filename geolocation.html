@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>geolocation</title>
+</head>
+<body>
+  <p>現在位置取得</p>
+  <button onclick="getPosition();">現在位置を取得</button>
+  <p id="result"></p>
+
+  <script>
+    var options = {
+      enableHighAccuracy: true, //高精度で取得するかどうかをtrueかfalse(初期値)で指定
+      timeout: 3000, //タイムアウト時間（ミリ秒で指定）
+      maximumAge: 0 //次回、再度現在位置を取得する場合にここで指定した秒数だけ、今回のデータがキャッシュされる（ミリ秒で指定）
+    };
+
+    function getPosition() {
+      navigator.geolocation.getCurrentPosition(success,error,options);
+    };
+
+    function success(positon) {
+      document.getElementById("result").innerHTML = "現在位置は<br>緯度："+position.coords.latitude+"経度："+position.coords.longitude;
+    };
+
+    function error() {
+      document.getElementById("result").innerHTML = "位置情報を取得できません";
+    };
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>drugAndDrop</title>
+  <style>
+    #upload {
+      background-color: skyblue; width: 300px; height: 300px;
+    }
+    .dragItemZone {
+      width: 100px; height: 100px;
+    }
+    #dragItem {
+      width: 100px; cursor: move;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dragItemZone">
+    <img src="drop.png" id="dragItem" draggable="true">
+  </div>
+  <div id="upload">
+    <p id="upload_text">ここにドラッグ</p>
+  </div> 
+
+  <script>
+    var dragItem = document.getElementById("dragItem");
+    var upload = document.getElementById("upload");
+    var upload_text = document.getElementById("upload_text");
+
+    upload.ondragover = function(event) {
+      event.preventDefault();
+    }
+
+    upload.ondrop = function(event) {
+      upload_text.style.display = "none";
+      event.currentTarget.appendChild(dragItem);
+      event.preventDefault();
+    }
+  </script>
+</body>
+</html>

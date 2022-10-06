@@ -1,0 +1,20 @@
+ul.target li {
+    margin-bottom: 5px;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+  }
+  
+  ul.target li:nth-child(even) {
+    margin-left : 10px;
+    margin-right : 0px;
+  }
+  
+  ul.target li:nth-child(odd) {
+    margin-left : 0px;
+    margin-right : 10px;
+  }
+  
+  ul.target li:nth-child(3n) {
+    background-color: red;
+  }

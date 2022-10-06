@@ -1,0 +1,31 @@
+<div class="textbox">
+  <link rel="stylesheet" href="style.css">
+  <input id="email" required="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)?$/i" type="email" /><label for="email">Email Address</label>
+  <div class="error">
+    Invalid email address
+  </div>
+  <div class="info">
+    <div class="tooltip">
+      Email address including domain
+    </div>
+  </div>
+</div>
+<div class="textbox">
+  <input id="password" required="" type="password" /><label for="password">Password</label>
+  <div class="error">
+    Invalid password
+  </div>
+  <div class="info">
+    <div class="tooltip">
+      Minimum 8 characters: 0-9 A-Z
+    </div>
+  </div>
+</div>
+<div class="textbox">
+  <input disabled="" id="disabled" type="email" /><label for="disabled">Disabled</label>
+  <div class="info">
+    <div class="tooltip">
+      This one is disabled
+    </div>
+  </div>
+</div>
